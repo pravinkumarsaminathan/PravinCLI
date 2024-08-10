@@ -1,3 +1,23 @@
+function checkSplitScreen() {
+    var isSplitScreen = (window.innerWidth < screen.width * 0.875 || window.innerHeight < screen.height * 0.875);
+    var isSmallSplitScreen = (window.innerWidth < screen.width * 0.625 || window.innerHeight < screen.height * 0.625);
+    var currentSplitScreenState = document.cookie.replace(/(?:(?:^|.*;\s*)isSplitScreen\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+
+    if (isSmallSplitScreen && currentSplitScreenState !== '2') {
+        document.cookie = "isSplitScreen=2; path=/";
+        location.reload();
+    } else if (isSplitScreen && !isSmallSplitScreen && currentSplitScreenState !== '1') {
+        document.cookie = "isSplitScreen=1; path=/";
+        location.reload();
+    } else if (!isSplitScreen && !isSmallSplitScreen && currentSplitScreenState !== '0') {
+        document.cookie = "isSplitScreen=0; path=/";
+        location.reload();
+    }
+}
+
+window.onload = checkSplitScreen;
+window.onresize = checkSplitScreen;
+
 document.getElementById('commandInput').addEventListener('keydown', function(event) {
     var input = document.getElementById('commandInput');
     var output = document.getElementById('output');

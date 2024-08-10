@@ -15,7 +15,7 @@ $info .= "I've got intermediate experience with <span style='color: #92d192;'>PH
 $info .= "I've been doing front-end and back-end web designing as a fun pastime for a couple of months now. \nCurrently, I'm learning <span style=\"color: #92d192;\">Java</span> and <span style=\"color: #92d192;\">Assembly language</span>\n";
 $info .= "Aside from that,\nI have basic knowledge of <span style=\"color: #92d192;\">C</span>, <span style=\"color: #92d192;\">Python</span>, <span style=\"color: #92d192;\">HTML</span>, <span style=\"color: #92d192;\">CSS</span> and <span style=\"color: #92d192;\">shell scripting</span>.\n";
 $info .= '<div style="color: #777c85;">';
-$info .= "____________________________________________________________ ";
+$info .= "____________________________________________________________________ ";
 $info .= '<i class="fab fa-cuttlefish"></i> ';
 $info .= '<i class="fab fa-php"></i> ';
 $info .= '<i class="fab fa-python"></i> ';
