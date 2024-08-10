@@ -17,6 +17,7 @@ function handleCommand($command)
             echo "<span style=\"color: rgb(5, 206, 145);\">project</span> | Projects I have worked on.             | projects\n";
             echo "<span style=\"color: rgb(5, 206, 145);\">links</span>   | Get all my important links and socials | links\n";
             echo "<span style=\"color: rgb(5, 206, 145);\">clear</span>   | Clear the screen.                      | clear\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">skills</span>  | Display programming skills.            | skills\n";
             echo "<span style=\"color: #b3b9c5;\">---</div>";
             break;
         case 'about':
@@ -33,6 +34,16 @@ function handleCommand($command)
             break;
         case 'links':
             load_comment('_links');
+            break;
+        case 'skills':
+            echo "\nProgramming Skills:\n\n";
+            displaySkill("C     ", 80);
+            displaySkill("PHP   ", 70);
+            displaySkill("Python", 60);
+            displaySkill("HTML  ", 80);
+            displaySkill("CSS   ", 40);
+            displaySkill("SQL   ", 70);
+            displaySkill("JS    ", 30);
             break;
         default:
             echo "---\n";
