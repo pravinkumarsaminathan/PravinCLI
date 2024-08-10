@@ -4,7 +4,7 @@ document.getElementById('commandInput').addEventListener('keydown', function(eve
         event.preventDefault();
         var input = document.getElementById('commandInput').value;
         var output = document.getElementById('output');
-        output.innerHTML += '<div class="user-input"><span class="prompt">you@/PRavinCLI:~$</span> ' + input + '</div>';
+        output.innerHTML += '<div class="user-input"><span class="prompt">you@/PravinCLI:~$</span> ' + input + '</div>';
         // Appending the user's input to the output display area with a custom prompt (you@/PravinCLI:~$) to mimic a terminal environment.
         
         // Send the command to the PHP script and get the response

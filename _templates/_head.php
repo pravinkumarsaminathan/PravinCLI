@@ -9,4 +9,5 @@
         href="/PravinCLI/css/<?php print(basename($_SERVER['PHP_SELF'],".php"))?>.css"
         rel="stylesheet">
     <?php } ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
