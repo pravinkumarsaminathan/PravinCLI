@@ -20,9 +20,7 @@ function handleCommand($command)
             echo "<span style=\"color: #b3b9c5;\">---</div>";
             break;
         case 'about':
-            echo "---\n";
-            echo "This is Pravin's CLI personal website created using HTML, CSS, and PHP.";
-            echo "---";
+            load_comment('_about');
             break;
         case 'info':
             load_comment('_info');

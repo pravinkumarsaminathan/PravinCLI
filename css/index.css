@@ -90,6 +90,6 @@ body {
 }
 
 .command-output {
-    color: rgb(139, 233, 253);
+    color: rgb(139, 233, 253); /* #b3b9c5 */
     margin-left: 20px;
 }
