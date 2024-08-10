@@ -1,0 +1,95 @@
+body {
+    background-color: #1e1e1e;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminal {
+    background: rgba(30, 30, 30, 0.8); /* Semi-transparent  background */
+    backdrop-filter: blur(2px); /* Glass effect for terminal*/
+    border: 2px solid #bd93f9;
+    width: 100%;
+    max-width: 1560px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(189, 147, 249, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    max-height: 90vh;
+    cursor: text;
+    background-size: cover;
+}
+
+.terminal-body {
+    white-space: pre-wrap;
+    overflow-y: auto;
+    flex-grow: 1;
+    color: rgb(139, 233, 253);
+    position: relative;
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+}
+
+.ascii-art {
+    float: right;
+    text-align: right;
+    color: rgb(139, 233, 253);
+    margin-left: 20px;
+}
+
+/* Custom scrollbar in the terminl*/
+.terminal-body::-webkit-scrollbar {
+    height: 8px;
+    scroll-behavior: auto;
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: #6272a4;
+    background-clip: content-box;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: #bd93f9;
+    border-radius: 5px;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-left: 20px;
+    color: rgb(255, 85, 85);
+    font-weight: normal; 
+}
+
+#commandInput {
+    width: 100%;
+    background-color: transparent;
+    color: rgb(241, 250, 140); 
+    border: none;
+    outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    font-weight: normal; 
+}
+
+.user-input {
+    color: rgb(241, 250, 140); 
+    font-weight: normal; 
+}
+
+.command-output {
+    color: rgb(139, 233, 253);
+    margin-left: 20px;
+}
