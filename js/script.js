@@ -1,7 +1,7 @@
 document.getElementById('commandInput').addEventListener('keydown', function(event) {
     var input = document.getElementById('commandInput');
     var output = document.getElementById('output');
-    var commands = ['help', 'about', 'info', 'clear', 'projects']; // List of available commands
+    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links']; // List of available commands
 
     if (event.key === 'Enter') {
         event.preventDefault();

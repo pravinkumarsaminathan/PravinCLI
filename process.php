@@ -11,10 +11,12 @@ function handleCommand($command)
         case 'help':
             $info  = "<div style=\"color: #b3b9c5;\">Available comments</span>\n\n";
             echo $info;
-            echo "<span style=\"color: rgb(5, 206, 145);\">help</span>    | List all available commands | help\n";
-            echo "<span style=\"color: rgb(5, 206, 145);\">about</span>   | About Me.                   | about\n";
-            echo "<span style=\"color: rgb(5, 206, 145);\">info</span>    | Information about me.       | info\n";
-            echo "<span style=\"color: rgb(5, 206, 145);\">clear</span>   | Clear the screen.           | clear\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">help</span>    | List all available commands            | help\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">about</span>   | About Me.                              | about\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">info</span>    | Information about me.                  | info\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">project</span> | Projects I have worked on.             | projects\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">links</span>   | Get all my important links and socials | links\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">clear</span>   | Clear the screen.                      | clear\n";
             echo "<span style=\"color: #b3b9c5;\">---</div>";
             break;
         case 'about':
@@ -30,6 +32,9 @@ function handleCommand($command)
             break;
         case 'projects':
             load_comment('_projects');
+            break;
+        case 'links':
+            load_comment('_links');
             break;
         default:
             echo "---\n";
