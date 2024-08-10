@@ -23,6 +23,9 @@ function handleCommand($command)
         case 'info':
             load_comment('_info');
             break;
+        case 'clear':
+            echo "CLEAR_SCREEN"; // ANSI escape codes to clear the screen
+            break;
         default:
             echo "---\n";
             echo "Unknown command: $command\nType 'help' to see available commands.\n";

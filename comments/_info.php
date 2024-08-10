@@ -13,7 +13,7 @@ $info .= '</div>';
 $info .= "\nWhat’s up? I’m a college kid who codes whenever I can.\n";
 $info .= "I've got intermediate experience with <span style='color: #92d192;'>PHP</span> and <span style='color: #92d192;'>JavaScript</span>\n";
 $info .= "I've been doing front-end and back-end web designing as a fun pastime for a couple of months now. \nCurrently, I'm learning <span style=\"color: #92d192;\">Java</span> and <span style=\"color: #92d192;\">Assembly language</span>\n";
-$info .= "Aside from that,\nI have basic knowledge of <span style=\"color: #92d192;\">C</span>, <span style=\"color: #92d192;\">Python,HTML,CSS,JS</span> and <span style=\"color: #92d192;\">shell scripting</span>.\n";
+$info .= "Aside from that,\nI have basic knowledge of <span style=\"color: #92d192;\">C</span>, <span style=\"color: #92d192;\">Python</span>, <span style=\"color: #92d192;\">HTML</span>, <span style=\"color: #92d192;\">CSS</span> and <span style=\"color: #92d192;\">shell scripting</span>.\n";
 $info .= '<div style="color: #777c85;">';
 $info .= "____________________________________________________________ ";
 $info .= '<i class="fab fa-cuttlefish"></i> ';

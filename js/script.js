@@ -1,31 +1,59 @@
 document.getElementById('commandInput').addEventListener('keydown', function(event) {
-    // Attaching an event listener to the element with the ID commandInput.Event Triggered:keydown, which occurs whenever a key is pressed down while the input field is focused.
+    var input = document.getElementById('commandInput');
+    var output = document.getElementById('output');
+    var commands = ['help', 'about', 'info', 'clear']; // List of available commands
+
     if (event.key === 'Enter') {
         event.preventDefault();
-        var input = document.getElementById('commandInput').value;
-        var output = document.getElementById('output');
-        output.innerHTML += '<div class="user-input"><span class="prompt">you@/PravinCLI:~$</span> ' + input + '</div>';
-        // Appending the user's input to the output display area with a custom prompt (you@/PravinCLI:~$) to mimic a terminal environment.
+        var command = input.value;
+        output.innerHTML += '<div class="user-input"><span class="prompt">you@/PravinCLI:~$</span> ' + command + '</div>';
         
         // Send the command to the PHP script and get the response
         fetch('/PravinCLI/process.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-                //Specifies that the content type is application/x-www-form-urlencoded, which is a standard way to send form data in POST requests.
             },
-            body: 'command=' + encodeURIComponent(input)
-            //Encodes the user's command as a URL-encoded string (command=...) and sends it in the request body.
+            body: 'command=' + encodeURIComponent(command)
         })
         .then(response => response.text())
         .then(data => {
-            output.innerHTML += '<div class="command-output">' + data.replace(/\n/g, '<br>') + '</div>';
-            document.getElementById('commandInput').value = '';
-            document.getElementById('terminalBody').scrollTop = document.getElementById('terminalBody').scrollHeight; // Scroll to the bottom
+            if (data === 'CLEAR_SCREEN') {
+                output.innerHTML = '';
+            } else {
+                output.innerHTML += '<div class="command-output">' + data.replace(/\n/g, '<br>') + '</div>';
+            }
+            input.value = '';
+            document.getElementById('terminalBody').scrollTop = document.getElementById('terminalBody').scrollHeight;
+            commandHistory.push(command); // Add the command to the history
+            historyIndex = commandHistory.length; // Reset the history index
         });
-        //1. Converts the response to plain text.
-        //2. Adds the response to the terminal output, replacing any newline characters (\n) with HTML line breaks (<br>) for proper formatting.
-        //3.  Resets the input field so the user can type a new command.
-        //4. Ensures that the terminal window scrolls to the bottom, so the latest output is always visible.
+    } else if (event.key === 'Tab' || (event.ctrlKey && event.key === 'i')) {
+        event.preventDefault();
+        var currentInput = input.value;
+        var matchingCommands = commands.filter(cmd => cmd.startsWith(currentInput));
+        if (matchingCommands.length === 1) {
+            input.value = matchingCommands[0];
+        }
+    } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        if (historyIndex > 0) {
+            historyIndex--;
+            input.value = commandHistory[historyIndex];
+        }
+    } else if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        if (historyIndex < commandHistory.length - 1) {
+            historyIndex++;
+            input.value = commandHistory[historyIndex];
+        } else {
+            historyIndex = commandHistory.length;
+            input.value = '';
+        }
     }
 });
+
+// Initialize command history and history index
+var commandHistory = [];
+var historyIndex = 0;
+
