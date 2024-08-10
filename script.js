@@ -8,7 +8,7 @@ document.getElementById('commandInput').addEventListener('keydown', function(eve
         // Appending the user's input to the output display area with a custom prompt (you@/PravinCLI:~$) to mimic a terminal environment.
         
         // Send the command to the PHP script and get the response
-        fetch('process.php', {
+        fetch('/PravinCLI/process.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
