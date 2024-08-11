@@ -1,5 +1,6 @@
 body {
-    background-color: #1e1e1e;
+    /* background-color: #1e1e1e; */
+    background-color: rgb(16, 17, 22);
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     height: 100vh;
