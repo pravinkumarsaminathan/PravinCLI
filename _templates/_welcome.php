@@ -28,7 +28,7 @@ if ($isLaptop && !$isSplitScreen && !$isSmallSplitScreen) { ?>
 </div>
                 <div class="command-output">I’m currently studying Computer Science and Engineering,                                                         .''555"` '5555b|</div>
                 <div class="command-output">and I love diving into new coding challenges.                                                                    T"@  ,,,^,mg,@,*</div>
-                <div class="command-output">Type 'help' to see a list of commands.                                                                              %p||`~~'.#`</div>
+                <div class="command-output">                                                                                                                    %p||`~~'.#`</div>
                 <div class="command-output">When I’m not coding, you can find me making playlists, socializing,                                                 ^Wp  ,#T</div>
                 <div class="command-output">or overthinking the next big idea.                                                                                  :b''@@b^}</div>
                 <div class="command-output">---                                                                                                              ,^     ` 'b 3-</div>
@@ -42,7 +42,7 @@ if ($isLaptop && !$isSplitScreen && !$isSmallSplitScreen) { ?>
 <div class="output" id="output">
 <div class="command-output">I’m currently studying Computer Science and Engineering,</div>
 <div class="command-output">and I love diving into new coding challenges.</div>
-<div class="command-output">Type \'help\' to see a list of commands.</div>
+<div class="command-output"></div>
 <div class="command-output">When I’m not coding, you can find me making playlists, socializing,</div>
 <div class="command-output">or overthinking the next big idea.</div>
 <div class="command-output">---</div>
@@ -63,7 +63,7 @@ if ($isLaptop && !$isSplitScreen && !$isSmallSplitScreen) { ?>
 </div>
 <div class="command-output">I’m currently studying Computer Science and Engineering,</div>
 <div class="command-output">and I love diving into new coding challenges.</div>
-<div class="command-output">Type \'help\' to see a list of commands.</div>
+<div class="command-output"></div>
 <div class="command-output">When I’m not coding, you can find me making playlists, socializing,</div>
 <div class="command-output">or overthinking the next big idea.</div>
 <div class="command-output">---</div>
