@@ -35,6 +35,9 @@ function handleCommand($command)
         case 'welcome':
             load_comment("_welcome");
             break;
+        case 'contact':
+            load_comment("_contact");
+            break;
         case 'exit':
             echo "EXIT_COMMAND";
             break;
