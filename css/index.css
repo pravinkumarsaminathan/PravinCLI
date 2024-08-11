@@ -8,7 +8,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .terminal {
     background: rgba(30, 30, 30, 0.8); /* Semi-transparent  background */
     backdrop-filter: blur(2px); /* Glass effect for terminal*/
@@ -32,6 +31,24 @@ body {
     flex-grow: 1;
     color: rgb(139, 233, 253);
     position: relative;
+}
+
+.mobile-message {
+    display: none;
+}
+
+/* Hide main content on mobile devices */
+@media only screen and (max-width: 768px) {
+    .terminal {
+        display: none;
+    }
+    .mobile-message {
+        display: block;
+        text-align: center;
+        margin-top: 20%;
+        font-size: 1.5em;
+        color: red; /* Add color for visibility */
+    }
 }
 
 .output {

@@ -2,6 +2,7 @@
 include_once 'libs/load.php';
 if (isset($_POST['command'])) {
     $command = trim($_POST['command']);
+    $command = strtolower($command);
     handleCommand($command);
 }
 
@@ -37,6 +38,12 @@ function handleCommand($command)
             break;
         case 'contact':
             load_comment("_contact");
+            break;
+        case 'source':
+            echo "OPEN_SOURCE";
+            break;
+        case 'github':
+            echo "OPEN_GITHUB";
             break;
         case 'exit':
             echo "EXIT_COMMAND";

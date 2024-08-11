@@ -53,7 +53,8 @@ echo '<div class="command-output">I have a deep love for the command line interf
 echo '<div class="command-output">---</div>';
 echo '<div class="command-output">Type \'help\' to see a list of commands.</div>';
 echo '</div>';
- } else {
+ }
+else {
 
 echo '<div class="output" id="output">';
 echo '<div class="command-output">';
