@@ -21,7 +21,7 @@ window.onresize = checkSplitScreen;
 document.getElementById('commandInput').addEventListener('keydown', function(event) {
     var input = document.getElementById('commandInput');
     var output = document.getElementById('output');
-    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links', 'skills', 'email', 'welcome']; // List of available commands
+    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links', 'skills', 'email', 'welcome' ]; // List of available commands
 
     if (event.key === 'Enter') {
         event.preventDefault();
@@ -40,7 +40,22 @@ document.getElementById('commandInput').addEventListener('keydown', function(eve
         .then(data => {
             if (data === 'CLEAR_SCREEN') {
                 output.innerHTML = '';
-            } else {
+            }
+            else if (data.trim() === 'EXIT_COMMAND') {
+                console.log("Exiting...");
+                window.close();
+                output.innerHTML += '<div class="command-output">---</div>'
+                output.innerHTML += '<div class="command-output">Your browser restrict scripts from closing windows.</div>';
+                output.innerHTML += '<div class="command-output">This is a security measure to prevent malicious behavior.</div>'
+                output.innerHTML += '<div class="command-output">Please close this tab manually.</div>';
+            }
+            else if (data.trim() === 'OPEN_MAILBOX') {
+                console.log("Opening mailbox...");
+                output.innerHTML += '<div class="command-output">Feel free to reach out to me at <a id=\"emailLink\" href=\"mailto:pravinkumarsaminathan@gmail.com\" style=\"color: rgb(5, 206, 145);\">pravinkumarsaminathan@gamil.com</a></div>';
+                window.location.href = 'mailto:pravinkumarsaminathan@gmail.com';
+            }
+            else
+            {
                 output.innerHTML += '<div class="command-output">' + data.replace(/\n/g, '<br>') + '</div>';
             }
             input.value = '';

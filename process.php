@@ -30,10 +30,13 @@ function handleCommand($command)
             load_comment('_skills');
             break;
         case 'email':
-            load_comment('_email');
+            echo "OPEN_MAILBOX";
             break;
         case 'welcome':
             load_comment("_welcome");
+            break;
+        case 'exit':
+            echo "EXIT_COMMAND";
             break;
         default:
             echo "---\n";
