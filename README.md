@@ -31,7 +31,7 @@ git clone https://github.com/pravinkumarsaminathan/PravinCLI.git
 
 2. Navigate to the Directory:
 ```bash
-cd yourrepository
+cd PravinCLI
 ```
 
 3. Then simply open the index.html file in your browser.
