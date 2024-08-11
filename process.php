@@ -17,7 +17,8 @@ function handleCommand($command)
             echo "<span style=\"color: rgb(5, 206, 145);\">project</span> | Projects I have worked on.             | projects\n";
             echo "<span style=\"color: rgb(5, 206, 145);\">links</span>   | Get all my important links and socials | links\n";
             echo "<span style=\"color: rgb(5, 206, 145);\">skills</span>  | Display programming skills.            | skills\n";
-            echo "<span style=\"color: rgb(5, 206, 145);\">email</span>   | Send an email to me.                   | skills\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">email</span>   | Send an email to me.                   | email\n";
+            echo "<span style=\"color: rgb(5, 206, 145);\">welcome</span> | display hero section.                  | welcome\n";
             echo "<span style=\"color: rgb(5, 206, 145);\">clear</span>   | Clear the screen.                      | clear\n";
             echo "<span style=\"color: #b3b9c5;\">---</div>";
             break;
@@ -40,8 +41,10 @@ function handleCommand($command)
             load_comment('_skills');
             break;
         case 'email':
-            $email = "pravinkumarsaminathan@gamil.com";
-            echo "Feel free to reach out to me at <a id=\"emailLink\" href=\"mailto:$email\" style=\"color: rgb(5, 206, 145);\">$email</a>";
+            load_comment('_email');
+            break;
+        case 'welcome':
+            load_comment("_welcome");
             break;
         default:
             echo "---\n";

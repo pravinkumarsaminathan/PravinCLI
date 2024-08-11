@@ -21,7 +21,7 @@ window.onresize = checkSplitScreen;
 document.getElementById('commandInput').addEventListener('keydown', function(event) {
     var input = document.getElementById('commandInput');
     var output = document.getElementById('output');
-    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links', 'skills', 'email']; // List of available commands
+    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links', 'skills', 'email', 'welcome']; // List of available commands
 
     if (event.key === 'Enter') {
         event.preventDefault();
