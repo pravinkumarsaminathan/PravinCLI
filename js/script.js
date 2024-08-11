@@ -51,7 +51,9 @@ document.getElementById('commandInput').addEventListener('keydown', function(eve
             }
             else if (data.trim() === 'OPEN_MAILBOX') {
                 console.log("Opening mailbox...");
-                output.innerHTML += '<div class="command-output">Feel free to reach out to me at <a id=\"emailLink\" href=\"mailto:pravinkumarsaminathan@gmail.com\" style=\"color: rgb(5, 206, 145);\">pravinkumarsaminathan@gamil.com</a></div>';
+                output.innerHTML += '<div class="command-output">If you have not been redirected, Click below <br>  </div>';
+                output.innerHTML += '<div style=\"font-family: Hack, Consolas, \'Courier New\', Courier, monospace; margin-left: 20px;\"><i class=\"fa fa-envelope\" aria-hidden=\"true\" style=\"color: #b3b9c5;\"></i> <strong><a href=\"mailto:pravinkumarsaminathan@gmail.com\" target=\"_blank\" rel=\"noreferrer\"><span style=\"color: #76d4d6;\">Mail</span></a></strong> <em style=\"color: #777c85;\">pravinkumarsaminathan@gmail.com</em></div>';
+                output.innerHTML += '<div class=\"command-output\"><style>a { color: inherit; text-decoration: none; }</style></div>';
                 window.location.href = 'mailto:pravinkumarsaminathan@gmail.com';
             }
             else if (command.trim() === 'source') {
