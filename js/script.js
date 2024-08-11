@@ -21,7 +21,7 @@ window.onresize = checkSplitScreen;
 document.getElementById('commandInput').addEventListener('keydown', function(event) {
     var input = document.getElementById('commandInput');
     var output = document.getElementById('output');
-    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links', 'skills', 'email', 'welcome', 'exit', 'contact' ]; // List of available commands
+    var commands = ['help', 'about', 'info', 'clear', 'projects', 'links', 'skills', 'email', 'welcome', 'exit', 'contact', 'source', 'github' ]; // List of available commands
 
     if (event.key === 'Enter') {
         event.preventDefault();
@@ -54,6 +54,20 @@ document.getElementById('commandInput').addEventListener('keydown', function(eve
                 output.innerHTML += '<div class="command-output">Feel free to reach out to me at <a id=\"emailLink\" href=\"mailto:pravinkumarsaminathan@gmail.com\" style=\"color: rgb(5, 206, 145);\">pravinkumarsaminathan@gamil.com</a></div>';
                 window.location.href = 'mailto:pravinkumarsaminathan@gmail.com';
             }
+            else if (command.trim() === 'source') {
+                console.log("Opening GitHub repository...");
+                window.open('https://github.com/pravinkumarsaminathan/PravinCLI', '_blank');
+                output.innerHTML += '<div class="command-output">---</div>'
+                output.innerHTML += '<div class="command-output">If you have not been redirected, Click below <br>  </div>';
+                output.innerHTML += '<div style=\"font-family: Hack, Consolas, \'Courier New\', Courier, monospace; margin-left: 20px;\"><i class=\"fab fa-fw fa-github-alt\" aria-hidden=\"true\" style=\"color: #b3b9c5;\"></i> <strong><a href=\"https://github.com/pravinkumarsaminathan/PravinCLI\" target=\"_blank\" rel=\"noreferrer\"><span style=\"color: #76d4d6;\">PravinCLI</span></a></strong> <em style=\"color: #777c85;\">comment line interface in website</em></div>';
+                output.innerHTML += '<div class=\"command-output\"><style>a { color: inherit; text-decoration: none; }</style></div>';}
+            else if (command.trim() === 'github') {
+                console.log("Opening GitHub ...");
+                window.open('https://github.com/pravinkumarsaminathan', '_blank');
+                output.innerHTML += '<div class="command-output">---</div>'
+                output.innerHTML += '<div class="command-output">If you have not been redirected, Click below <br>  </div>';
+                output.innerHTML += '<div style=\"font-family: Hack, Consolas, \'Courier New\', Courier, monospace; margin-left: 20px;\"><i class=\"fab fa-fw fa-github-alt\" aria-hidden=\"true\" style=\"color: #b3b9c5;\"></i> <strong><a href=\"https://github.com/pravinkumarsaminathan\" target=\"_blank\" rel=\"noreferrer\"><span style=\"color: #76d4d6;\">GitHub</span></a></strong> <em style=\"color: #777c85;\">PRAVIN KUMAR</em></div>';
+                output.innerHTML += '<div class=\"command-output\"><style>a { color: inherit; text-decoration: none; }</style></div>';}
             else
             {
                 output.innerHTML += '<div class="command-output">' + data.replace(/\n/g, '<br>') + '</div>';
