@@ -11,7 +11,7 @@ include_once 'libs/load.php'; ?>
         </div>
     </div>
     <div class="mobile-message">
-        This website is best viewed on a laptop.
+        This website is best viewed on a laptop's full screen.
     </div>
     <script src="PravinCLI/js/script.js"></script>
 </body>
