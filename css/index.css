@@ -38,7 +38,7 @@ body {
 }
 
 /* Hide main content on mobile devices */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     .terminal {
         display: none;
     }
