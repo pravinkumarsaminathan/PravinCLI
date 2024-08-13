@@ -4,9 +4,9 @@ $isSplitScreen = false;
 $isSmallSplitScreen = false;
 
 // Check if the screen width and height meet the criteria for a full-screen laptop
-if ($_SERVER['HTTP_USER_AGENT'] && preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT']) === 0) {
-    $isLaptop = true;
-}
+// if ($_SERVER['HTTP_USER_AGENT'] && preg_match('/(?i)msie [1-8]/',$_SERVER['HTTP_USER_AGENT']) === 0) {
+//     $isLaptop = true;
+// }
 if (isset($_COOKIE['isSplitScreen'])) {
     if ($_COOKIE['isSplitScreen'] === '1') {
         $isSplitScreen = true;
@@ -24,8 +24,7 @@ if ($isLaptop && !$isSplitScreen && !$isSmallSplitScreen) { ?>
 ██      ██   ██ ██   ██  ██  ██  ██ ██  ██ ██ ██  ██  ██    ██ ██  ██  ██ ██   ██ ██   ██                       7####^`^"7W7^"@####
 ██      ██   ██ ██   ██   ████   ██ ██   ████ ██   ██  ██████  ██      ██ ██   ██ ██   ██                       @#@b`         ^@#@^
                                                                                                                  ##^,,,,   ,,,,^#^
-                                                                                                                ,,@######"#######=                                                                                  
-</div>
+                                                                                                                ,,@######"#######=</div>
                 <div class="command-output">I’m currently studying Computer Science and Engineering,                                                         .''555"` '5555b|</div>
                 <div class="command-output">and I love diving into new coding challenges.                                                                    T"@  ,,,^,mg,@,*</div>
                 <div class="command-output">                                                                                                                    %p||`~~'.#`</div>
@@ -38,7 +37,7 @@ if ($isLaptop && !$isSplitScreen && !$isSmallSplitScreen) { ?>
                 <div class="command-output">---                                                                                                        '            ^@##b     ($    !</div>
                 <div class="command-output">Type 'help' to see a list of commands.</div>
             </div>
-<?php } elseif ($isLaptop && $isSmallSplitScreen) { ?>
+<?php } elseif ($isSmallSplitScreen) { ?>
 <div class="output" id="output">
 <div class="command-output">I’m currently studying Computer Science and Engineering,</div>
 <div class="command-output">and I love diving into new coding challenges.</div>
