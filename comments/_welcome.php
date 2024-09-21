@@ -37,7 +37,7 @@ echo "<div class=\"command-output\">This is my website.A portal to new ideas    
 echo "<div class=\"command-output\">I designed this website to resemble a terminal because                                                     {      }   #\"GpGb   [</div>";
 echo "<div class=\"command-output\">I have a deep love for the command line interface (CLI).                                                   C      3 * @#######Nl      `</div>";
 echo "<div class=\"command-output\">---                                                                                                        '            ^@##b     ($    !</div>";
-echo '<div class="command-output">Type \'help\' to see a list of commands.</div>';
+echo "<div class=\"command-output\">Type 'help' to see a list of commands.</div>";
 } elseif ($isSmallSplitScreen) { 
 echo '<div class="output" id="output">';
 echo '<div class="command-output">I’m currently studying Computer Science and Engineering,</div>';
@@ -50,7 +50,7 @@ echo '<div class="command-output">This is my website.A portal to new ideas</div>
 echo '<div class="command-output">I designed this website to resemble a terminal because</div>';
 echo '<div class="command-output">I have a deep love for the command line interface (CLI).</div>';
 echo '<div class="command-output">---</div>';
-echo '<div class="command-output">Type \'help\' to see a list of commands.</div>';
+echo "<div class=\"command-output\">Type 'help' to see a list of commands.</div>";
 echo '</div>';
  }
 else {
@@ -74,7 +74,7 @@ echo '<div class="command-output">This is my website.A portal to new ideas</div>
 echo '<div class="command-output">I designed this website to resemble a terminal because</div>';
 echo '<div class="command-output">I have a deep love for the command line interface (CLI).</div>';
 echo '<div class="command-output">---</div>';
-echo '<div class="command-output">Type \'help\' to see a list of commands.</div>';
+echo "<div class=\"command-output\">Type 'help' to see a list of commands.</div>";
 echo '</div>';
 }
 ?>
